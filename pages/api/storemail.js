@@ -27,7 +27,7 @@ export default async function handler(req, res) {
         }
 
         res.status(200).json({
-            message: "Email stored successful!",
+            message: "Email stored successfully!",
             email
         })
 
