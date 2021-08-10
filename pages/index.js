@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styles from './index.module.css';
-import { connectToDatabase } from '../lib/mongodb';
+// import { connectToDatabase } from '../lib/mongodb';
 import { currentEnv } from "../client/config/currentEnv";
 
 export async function getServerSideProps(context) {
@@ -14,15 +14,21 @@ export async function getServerSideProps(context) {
   }
 
   // DB support
-  const { client } = await connectToDatabase()
-  const isConnected = await client.isConnected()
+  // const { client } = await connectToDatabase()
+  // const isConnected = await client.isConnected()
 
   return {
-    props: {data, isConnected}, // will be passed to the page component as props
+    props: {
+      data, 
+      // isConnected
+    },
   }
 }
 
-export default function Home({ data, isConnected }) {
+export default function Home({ 
+  data, 
+  // isConnected
+ }) {
 
 
   return (
