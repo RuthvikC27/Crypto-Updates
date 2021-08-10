@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import styles from './index.module.css';
 // import { connectToDatabase } from '../lib/mongodb';
-import { currentEnv } from "../client/config/currentEnv";
+// import { currentEnv } from "../client/config/currentEnv";
 
-console.log(currentEnv);
+// console.log(currentEnv);
 
 export async function getServerSideProps(context) {
 
