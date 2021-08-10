@@ -6,18 +6,9 @@ import { currentEnv } from "../client/config/currentEnv";
 console.log(currentEnv);
 
 export async function getServerSideProps(context) {
-    
-    if(typeof window === 'undefined'){
-      return { props: {data: null } };
-    }
-    return { props: {data: null } };
-
 
   //   const res = await fetch(`${currentEnv}/api/cryptoliveprice`);
-    
-  //   let data;
-  //   if(res.status === 200) data = await res.json()
-  //   else data = null;
+  //   const data = await res.json();
 
   // if (!data) {
   //   return {
@@ -32,7 +23,7 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      data, 
+      data: null, 
       // isConnected
     },
   }
