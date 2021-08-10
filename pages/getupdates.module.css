@@ -1,0 +1,43 @@
+.title{
+    font-size: x-large;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .sendEmailForm{
+    text-align: center;
+    margin: auto;
+  }
+  
+  .sendEmailForm input{
+    width: 350px;
+    padding: 10px;
+  }
+  
+  .sendEmailForm button{
+    padding: 10px;
+    background-color: #81C3FC;
+    border: none;
+    color: white;
+    margin: 20px;
+    cursor: pointer;
+  }
+  
+  .error{
+    text-align: center;
+    background-color: tomato;
+    color: white;
+    padding: 10px;
+  }
+  
+  .success{
+    text-align: center;
+    background-color: green;
+    color: white;
+    padding: 10px;
+  }
+  
+  @media (max-width: 600px) {
+   
+  }
+  

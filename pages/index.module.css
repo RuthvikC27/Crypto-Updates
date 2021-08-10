@@ -1,0 +1,43 @@
+.title{
+    font-size: x-large;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .cryptoTable, .cryptoTable th, .cryptoTable td{
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 10px;
+  }
+  
+  .cryptoTable th{
+    background-color: cadetblue;
+    color: white;
+  }
+
+  .cryptoTable tr:nth-child(odd){
+    background-color: wheat;
+  }
+
+  .cryptoTable tr:nth-child(even){
+    background-color: whitesmoke;
+  }
+
+  .cryptoTable tr:hover{
+    background-color: thistle;
+    color: white;
+  }
+
+  .cryptoTable{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  
+
+  @media (max-width: 600px) {
+    .cryptoTable{
+      width: 100%;
+    }
+  }
+  
