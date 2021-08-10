@@ -3,7 +3,7 @@ import styles from './index.module.css';
 import { connectToDatabase } from '../lib/mongodb';
 
 export async function getServerSideProps(context) {
-  const res = await fetch("http://localhost:3000/api/cryptoliveprice");
+  const res = await fetch("/api/cryptoliveprice");
   const data = await res.json()
 
   if (!data) {
