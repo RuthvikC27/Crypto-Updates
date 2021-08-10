@@ -34,11 +34,11 @@ export default function Home({
   // isConnected
  }){
 
-  if(typeof window !== 'undefined'){
-    window.setTimeout(function () {
-      window.location.reload();
-    }, 5000);
-  }
+  // if(typeof window !== 'undefined'){
+  //   window.setTimeout(function () {
+  //     window.location.reload();
+  //   }, 5000);
+  // }
 
   return (
     <div className={styles.container}>
