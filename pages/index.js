@@ -1,21 +1,21 @@
 import Head from 'next/head';
 import styles from './index.module.css';
 // import { connectToDatabase } from '../lib/mongodb';
-// import { currentEnv } from "../client/config/currentEnv";
+import { currentEnv } from "../client/config/currentEnv";
 
 // console.log(currentEnv);
 
 export async function getServerSideProps(context) {
 
-  //   const res = await fetch(`${currentEnv}/api/cryptoliveprice`);
-  //   const data = await res.json();
+    const res = await fetch(`${currentEnv}/api/cryptoliveprice`);
+    const data = await res.json();
 
-  // if (!data) {
-  //   return {
-  //     props: { data: null},
-  //     notFound: true,
-  //   }
-  // }
+  if (!data) {
+    return {
+      props: { data: null},
+      notFound: true,
+    }
+  }
 
   // DB support
   // const { client } = await connectToDatabase()
@@ -23,7 +23,7 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      data: null, 
+      data, 
       // isConnected
     },
   }
