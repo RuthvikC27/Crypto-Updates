@@ -1,6 +1,5 @@
 import { useState } from 'react';
-
-import { handleError } from '../client/ErrorHandling/handleError';
+// import { currentEnv } from "../client/config/currentEnv";
 import styles from './getupdates.module.css'
 
 export default function SendMail({ data }) {

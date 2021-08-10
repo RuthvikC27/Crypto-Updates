@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import styles from './index.module.css';
 import { connectToDatabase } from '../lib/mongodb';
+import { currentEnv } from "../client/config/currentEnv";
 
 export async function getServerSideProps(context) {
-  const res = await fetch("/api/cryptoliveprice");
+  const res = await fetch(`${currentEnv}/api/cryptoliveprice`);
   const data = await res.json()
 
   if (!data) {
