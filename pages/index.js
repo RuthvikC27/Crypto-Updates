@@ -3,12 +3,19 @@ import styles from './index.module.css';
 // import { connectToDatabase } from '../lib/mongodb';
 import { currentEnv } from "../client/config/currentEnv";
 
+console.log(currentEnv);
+
 export async function getServerSideProps(context) {
-  const res = await fetch(`${currentEnv}/api/cryptoliveprice`);
-  const data = await res.json()
+
+    const res = await fetch(`${currentEnv}/api/cryptoliveprice`);
+    
+    let data;
+    if(res.status === 200) data = await res.json()
+    else data = null;
 
   if (!data) {
     return {
+      props: { data: null},
       notFound: true,
     }
   }
@@ -52,7 +59,7 @@ export default function Home({
           </thead>
           <tfoot>
             {
-              data.map((value, key) => {
+              data && data.map((value, key) => {
                 return <tr className={styles.cryptoLi} key={key}>
                   <td>{value.name}</td>
                   <td>{value.code}</td>
